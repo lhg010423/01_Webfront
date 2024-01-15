@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>12_HTML연습문제3</title>
+    </head>
+
+    <body>
+        
+        <!-- 회원가입하고 데이터를 전솔할때 보낼 데이터의 범위를 form으로 감싼다 -->
+        <form>
+            <h1>회원가입</h1>
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                    <tr>
+                        <th>ID</th>
+                        <td> <!-- input의 기본값은 text라서 type="text" 생략가능, name속성값 = 값 -->
+                            <input placeholder="아이디 10글자 이내" max="10" name="id">
+                        </td>
+                        <td>
+                            <button type="button">중복 확인</button><br>
+                        </td>
+                    </tr>
+                       
+                    <tr>
+                        <th>비밀번호</th>
+                        <td colspan="2">
+                            <input type="password" placeholder="영문,숫자,특수분자 포함 8자 이상" name="pw" min="8" size="30"> </th><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>비밀번호 확인</th>
+                        <td colspan="2">
+                            <input type="password" size="30"><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Email</th>
+                        <td>
+                            <input type="email">
+                        </td>
+                            <select>
+                                <option>gmail.com</option>
+                                <option>naver.com</option>
+                                <option>daum.com</option>
+                                <option selected>직접입력</option>
+                            </select>
+                    </tr>
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>추가 정보</legend>
+                프로필 사진 <br><br>
+                성별 : <input type="radio" name="gender" id="man"> 남자 <input type="radio" name="gender" id="woman"> 여자<br><br>
+                생년월일 : <input type="date"><br><br>
+                취미<br><br>
+                <input type="checkbox" name="취미" id="baseball">야구
+                <input type="checkbox" name="취미" id="basketball">농구
+                <input type="checkbox" name="취미" id="soccer">축구<br>
+                <input type="checkbox" name="취미" id="study">공부
+                <input type="checkbox" name="취미" id="music">음악감상<br>
+                <input type="checkbox" name="취미" id="onather">기타<input><br><br>
+
+                자기소개<textarea rows="200px" cols="200px"></textarea>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </fieldset>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+    
+    </body>
+</html>
