@@ -13,6 +13,8 @@
             <h1>회원가입</h1>
             <fieldset>
                 <legend>필수 입력 사항</legend>
+                <table>
+
                     <tr>
                         <th>ID</th>
                         <td> <!-- input의 기본값은 text라서 type="text" 생략가능, name속성값 = 값 -->
@@ -22,21 +24,21 @@
                             <button type="button">중복 확인</button><br>
                         </td>
                     </tr>
-                       
+                    
                     <tr>
                         <th>비밀번호</th>
                         <td colspan="2">
                             <input type="password" placeholder="영문,숫자,특수분자 포함 8자 이상" name="pw" min="8" size="30"> </th><br>
                         </td>
                     </tr>
-
+                    
                     <tr>
                         <th>비밀번호 확인</th>
                         <td colspan="2">
                             <input type="password" size="30"><br>
                         </td>
                     </tr>
-
+                    
                     <tr>
                         <th>Email</th>
                         <td>
@@ -48,8 +50,9 @@
                                 <option>daum.com</option>
                                 <option selected>직접입력</option>
                             </select>
-                    </tr>
-            </fieldset>
+                        </tr>
+                    </fieldset>
+                </table>
         </form>
 
         <form>
@@ -66,7 +69,7 @@
                 <input type="checkbox" name="취미" id="music">음악감상<br>
                 <input type="checkbox" name="취미" id="onather">기타<input><br><br>
 
-                자기소개<textarea rows="200px" cols="200px"></textarea>
+                자기소개<textarea rows="10px" cols="10px"></textarea>
                 
 
 
