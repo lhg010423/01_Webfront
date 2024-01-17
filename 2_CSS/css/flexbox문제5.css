@@ -1,0 +1,136 @@
+div {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.container-5 {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    background-color: yellow;
+    flex-basis: 30%;
+    display: flex;
+}
+
+.head1 {
+    flex-basis: 20%;
+}
+
+.head2 {
+    flex-basis: 40%;
+}
+
+.head3 {
+    flex-basis: 40%;
+}
+
+
+.body {
+    flex-basis: 70%;
+    display: flex;
+}
+
+.body1 {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.body1-1 {
+    flex-basis: 33.3%;
+    background-color: skyblue;
+}
+
+.body1-2 {
+    flex-basis: 33.3%;
+    background-color: skyblue;
+}
+
+.body1-3 {
+    flex-basis: 33.3%;
+    background-color: skyblue;
+}
+
+.body2 {
+    flex-basis: 15%;
+    background-color: pink;
+}
+
+.body3 {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.body3-1 {
+    flex-basis: 50%;
+    background-color: orange;
+}
+
+.body3-2 {
+    flex-basis: 50%;
+    display: flex;
+}
+
+.body3-2-1 {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.body3-2-1-1 {
+    flex-basis: 50%;
+    background-color: green;
+}
+
+.body3-2-1-2 {
+    flex-basis: 50%;
+    background-color: green;
+}
+
+.body3-2-2 {
+    flex-basis: 50%;
+    background-color: red;
+
+}
+
+.body4 {
+    flex-basis: 15%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+}
+
+.body4-1 {
+    flex-basis: 20%;
+}
+
+.body4-2 {
+    flex-basis: 60%;
+}
+
+.body4-3 {
+    flex-basis: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
