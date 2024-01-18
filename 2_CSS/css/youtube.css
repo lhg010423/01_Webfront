@@ -3,10 +3,15 @@
     border: 1px solid black;
 }
 
+/* 이걸 해야 홈페이지 첫 부분이
+좌측 상단으로 공백없이 붙음 */
 body {
     margin: 0;
 }
 
+/* width로 고정된 너비를 가지고
+margin: auto; 로 나머지 좌우 여백을
+계산해서 수평 가운데 정렬로 만듬 */
 main {
     width: 1500px;
     margin: auto;

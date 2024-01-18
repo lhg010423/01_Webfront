@@ -74,7 +74,7 @@ p[name="name-1"] {
 
 
 
-
+/* 상태 선택자 */
 #focus-test:focus {
     background-color: red;
 }
