@@ -30,7 +30,7 @@ css 속성 장석 시 크로스 브라우저(브라우저가 달라지는 경우
 
 /* 대각선 움직이기 */
 .trans-xy-2d:hover {
-    transform: translate(100px, -100px);
+    transform: translate(100px, 100px);
 }
 
 
