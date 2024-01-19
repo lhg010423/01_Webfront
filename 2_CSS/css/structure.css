@@ -46,9 +46,7 @@ header > section:nth-of-type(1) {
     align-items: center;
 }
 
-#home-logo {
-    width: 120px;
-}
+
 
 /* 검색 스타일 */
 .search-area {
