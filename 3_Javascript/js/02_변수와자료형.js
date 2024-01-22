@@ -181,7 +181,7 @@ console.log("user['id'] : ", user['id']);
 console.log(user['pw']);
 console.log(user['userName'], typeof user['userName']);
 
-// 변수명 2 : 변수명.key
+// 방법 2 : 변수명.key
 console.log(user.id, user.pw, user.userName);
 
 // 함수(function)
