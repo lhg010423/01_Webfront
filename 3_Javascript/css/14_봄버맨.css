@@ -1,0 +1,13 @@
+.box {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+
+    /* 봄버맨이 박스 밖으로 못나가게 함 */
+    overflow: hidden;
+}
+
+#man {
+    width: 50px;
+    height: 50px;
+}

@@ -170,7 +170,12 @@ document.querySelector("#user-input")
     if(e.key == "Enter") { // 엔터가 눌러졌을 때
         readValue();
     }
-})
+});
+
+
+
+
+
 
 
 
