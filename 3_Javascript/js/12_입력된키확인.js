@@ -2,7 +2,7 @@
 // 문자열.toUpperCase() : 영어를 모두 대문자로 변경( a -> A)
 
 // 화면에 존재하는 key 모두 얻어오기, 배열로 생김 0 1 2 3
-const keys = document.querySelectorAll(".key")
+const keys = document.squerySelectorAll(".key")
 
 // 문서(화면 전체)에서 키가 눌려지는걸 감지했을 때
 document.addEventListener("keydown", function(e) {
