@@ -6,7 +6,7 @@ function test() {
     // 확인 -> 입력한 문자열
     // 취소 -> null
 
-    if(password = null) { // 취소
+    if(password == null) { // 취소
         alert("취소");
     } else { // 확인
         if(password == '1234') {

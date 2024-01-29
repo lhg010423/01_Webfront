@@ -100,19 +100,26 @@ function executeFn2() {
 
 // 입력 받은 단(2~9) 출력하기
 function executeFn3() {
-    const number = Number(document.getElementById("input3").value);
+    // 입력된 값(단)
+    const input = Number(document.getElementById("input3").value);
 
+    // 결과를 출력할 요소 ul태그
     const ul = document.getElementById("result3");
 
-    ul.innerHTML = "";
+    ul.innerHTML = ""; // 이전 내용 삭제
+
+    // 입력 받은 단이 2~9 사이가 아닐 경우
+    // "2~9 사이만 입력해주세요" 알림창 띄우기
+
     if(input < 2 || input > 9) {
         alert("2~9 사이만 입력해 주세요");
         return; // 함수를 종료하고 호출한 곳으로 돌아감
-    }           //  함수 종료 정도로만 인식
-    
-    for(let num = 1; num <= 9; num++) {
-        ul.innerHTML += `<li>${number} x ${num} = ${number*num}</li>`;
+                // 함수 종료 정도로만 인식
     }
+
+    for(let num = 1; num <= 9; num++) {
+        ul.innerHTML += `<li> ${input} x ${num} = ${input * num} </li>`;
+    } 
 }
 
 /* 다음 모양 출력하기
