@@ -1,7 +1,7 @@
 const result = document.querySelector("#result");
 const number = document.querySelectorAll(".number");
 
-for(let i = 0; i < number.length)
+for(let i = 0; i < number.length; i++) {
     switch(e.target) {
         case 0: result.innerText = "1"; break; 
         case 1: result.innerText = "2"; break; 
@@ -14,7 +14,7 @@ for(let i = 0; i < number.length)
         case 8: result.innerText = "9"; break; 
         case 9: result.innerText = "0"; break; 
   
-});
+}};
 
 
 
