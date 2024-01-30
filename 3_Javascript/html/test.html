@@ -8,44 +8,44 @@
 </head>
 <body>
     <div>
-        <label>너비 : <input class="width" type="number"><span>px</span></label>
-        <label>높이 : <input class="height" type="number"><span>px</span></label>
+        <label>너비 : <input id="box-width" type="number"><span>px</span></label>
+        <label>높이 : <input id="box-height" type="number"><span>px</span></label>
     </div>
 
     <div>
-        <label>글자크기 : <input class="font-size" type="number"></label>
+        <label>글자크기 : <input id="fs" type="number"></label>
         <label>굵기 : 
             <!-- name 을 해야 하나만 선택됨 -->
             <!-- value 있어야함 그 값들을 수집하는 거, 값이 css 속성값이어야 함-->
-            <label for="fontnm">보통<input type="radio" name="fw" value="normal"></label>
-            <label for="fontbd">굵게<input type="radio" name="fw" value="bold"></label>
+            <label for="fontnm"><span>보통</span><input type="radio" name="fw" value="normal"></label>
+            <label for="fontbd"><span>굵게</span><input type="radio" name="fw" value="bold"></label>
         </label>
     </div>
 
     <div>
-        <label>글자색 : <input type="text"></label>
-        <label>배경색 : <input type="text"></label>
+        <label>글자색 : <input type="text" id="box-font-color"></label>
+        <label>배경색 : <input type="text" id="box-bg-color"></label>
     </div>
 
     <div>
         <label>가로정렬 : 
-            <label for="widthLeft"><span>왼쪽</span><input type="radio" name="width" value="flex-start"></label>
-            <label for="widthCenter"><span>가운데</span><input type="radio" name="width" value="center"></label>
-            <label for="widthRight"><span>오른쪽</span><input type="radio" name="width" value="flex-end"></label>
+            <label><span>왼쪽</span><input type="radio" name="align-row" value="flex-start"></label>
+            <label><span>가운데</span><input type="radio" name="align-row" value="center"></label>
+            <label><span>오른쪽</span><input type="radio" name="align-row" value="flex-end"></label>
         </label>
     </div>
 
     <div>
         <label>세로정렬 : 
-            <label for="heightTop"><span>위</span><input type="radio" name="height" id="heightTop"></label>
-            <label for="heightCenter"><span>가운데</span><input type="radio" name="height" id="heightCenter"></label>
-            <label for="heightBottom"><span>아래</span><input type="radio" name="height" id="heightBottom"></label>
+            <label><span>위</span><input type="radio" name="align-col" value="flex-start"></label>
+            <label><span>가운데</span><input type="radio" name="align-col" value="center"></label>
+            <label><span>아래</span><input type="radio" name="align-col" value="flex-end"></label>
         </label>
     </div>
 
-    <div><label>출력 문자열 : <input class="str" type="text"></label></div>
-    <button onclick="result()" class="btn">적용하기</button>
-    <div class="box" type="text"></div>
+    <div><label>출력 문자열 : <input id="content" type="text"></label></div>
+    <button id="apply-btn">적용하기</button>
+    <div id="box"></div>
 
     
     

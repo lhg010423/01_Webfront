@@ -41,6 +41,9 @@ applyBtn.addEventListener("click", function() {
         box.style.fontSize = fs.value + "px";
     }
 
+    // 위에 if문에는 input으로 글자개수가 0보다 클때이지만
+    // 아래는 radio로 조건을 어떻게해야하는지 모르면
+    // console.log(); 를 써서 알아낸다
     //console.log(fw); // null
     // fw -> 체크된게 없으면 null 반환
     //    -> 체크된게 있으면 null 아님
@@ -49,14 +52,22 @@ applyBtn.addEventListener("click", function() {
         box.style.fontWeight = fw.value;
     }
 
+    // 글자색
     if(fontColor.value.trim().length > 0) {
-        box.style.fontColor = fontColor.value;
+        box.style.color = fontColor.value;
     }
 
-    box.style.justifyContent
+    // 배경색
+    if(bgColor.value.trim().length > 0) {
+        box.style.backgroundColor = bgColor.value;
+    }
+
+    if(row != null) {
+    box.style.justifyContent = row.value;
+    }
 
     if(col != null) {
-    box.style.alignItems
+    box.style.alignItems = col.value;
     }
 
     // content에 작성된 값
