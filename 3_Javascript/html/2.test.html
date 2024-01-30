@@ -12,12 +12,13 @@
     <ul id="ulTag"></ul>
 
 <script>
+
   let arr = [1, 2, 3, 4, 5];
   for(let i = 0; i < 5; i++) {
-    let arrValue = arr[i] * 2; 
-    ulTag= "<li>" + arrValue + "</li>";
+    arr[i] *= 2; 
+    ulTag.innerHTML += "<li>" + arr[i] + "</li>";
+    
   }
-  ulTag.innerHTML = ulTag;
 
 </script>
 

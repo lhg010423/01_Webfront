@@ -28,7 +28,7 @@
             let tagInnerText = document.getElementById("tagInnerText").value;
             let colorName = document.getElementById("colorName").value;
             
-            result.innerHTML += `<${tagName} color="${colorName}"> ${tagInnerText} </${tagName}>`;
+            result.innerHTML = `<${tagName} style="color:${colorName}"> ${tagInnerText} </${tagName}>`;
 
         });
 

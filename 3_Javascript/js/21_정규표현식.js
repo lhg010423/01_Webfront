@@ -56,7 +56,7 @@ document.getElementById("btn2").addEventListener("click", () => {
 
 // -----------------------------------------------------------
 // 이름 유효성 검사하기
-document.getElementById("inputName1").addEventListener("keyup", () => {
+document.getElementById("inputName1").addEventListener("keyup", (e) => {
     // 화살표 함수의 this
     // 화살표 함수의 this는 상위(부모) 스코프 값이 상속된다.
     
@@ -64,7 +64,7 @@ document.getElementById("inputName1").addEventListener("keyup", () => {
     // 이벤트가 일어난 객체
     
     // 결과 출력용 span 얻어오기
-    const span = document .getElementById("inputName1Result");
+    const span = document .getElementById("inputNameResult1");
 
     // 한글 2~5글자 정규표현식 객체 만들기
     const regExp = /^[ㄱ-힣]{2,5}$/; // 시작과 끝이 한글로 이루어진 거
@@ -125,6 +125,16 @@ document.getElementById("inputPno").addEventListener("keyup", (e) => {
 
 // -------------------------------------------------------
 // 회원가입
+let checkObj = {
+    "inputId" : false, // 아이디
+    "inputPw" : false, // 비밀번호
+    "inputPwConfirm" : false, // 비번확인
+    "inputName" : false, // 이름
+    "gender" : false, // 성별
+    "inputTel" : false // 전화번호
+}
+
+
 // 아이디
 document.getElementById("idBtn").addEventListener("click", (e) => {
     
@@ -132,8 +142,10 @@ document.getElementById("idBtn").addEventListener("click", (e) => {
     const idExp = /^[a-z][a-zA-Z0-9\-_]{5,13}$/;
     if(idExp.test(inputId.value)) {
         inputId.style.backgroundColor = "springgreen";
+        let checkObj = { "inputId" : true }
     }else {
         inputId.style.backgroundColor = "red"
+        let checkObj = { "inputId" : false }
     }
 });
 
@@ -143,10 +155,35 @@ document.getElementById("idBtn").addEventListener("click", (e) => {
 // 비밀번호 확인
 document.getElementById("inputPwConFirm").addEventListener("keyup", (e) => {
     const pwpwResult = document.getElementById("inputPwConFirmResult");
+
+    // 비번에 값이 없고 비번확인에 값을 넣었을 때
     if(inputPw.value.length == 0 && e.target.value.length > 0) {
         e.target.value = "";
         pwpwResult.innerText = "비밀번호를 입력하시오";
-        // 포커스 아직 안함
+        pwpwResult.style.color = "red";
+        document.getElementById("inputPw").focus();
+        setTimeout(function() {
+            pwpwResult.innerText = "";
+        }, 3000); 
+
+
+        // 비번 input을 focus하면 "비밀번호를 입력하시오"문구가 사라짐
+        document.getElementById("inputPw").addEventListener("focus", (e) => {
+            pwpwResult.innerText = "";
+        });
+    }
+
+
+
+    // 비번에 값이 있고 비번, 비번확인이 서로 값이 같을 때
+    if(inputPw.value == inputPwConFirm.value && inputPw.value.length != 0){
+        inputPwResult.innerText = "비밀번호 일치";
+        inputPwResult.style.color = "green";
+        let checkObj = {"inputPw" : true,
+        "inputPwConFirm" : true }
+        
+    } else {
+        inputPwResult.innerText = "";
     }
 });
 
@@ -155,8 +192,74 @@ document.getElementById("inputPwConFirm").addEventListener("keyup", (e) => {
 
 
 // 비밀번호
-document.getElementById("inputPw").addEventListener("keyup", (e) => {
-    if(inputPw.value == inputPwConFirm.value){
-        inputPwResult.innerText = "비밀번호 일치";
+// document.getElementById("inputPw").addEventListener("keyup", (e) => {
+//     if(inputPw.value == inputPwConFirm.value && inputPw.value.length != 0){
+//         inputPwResult.innerText = "비밀번호 일치";
+//         inputPwResult.style.color = "green";
+//         // "inputPw" = true;
+//         // "inputPwConFirm" = true;
+//         inputPwResult.innerText = "";
+//     }
+
+
+// });
+
+
+// 이름
+document.getElementById("inputName").addEventListener("keyup", (e) => {
+    let inputNameResult = document.getElementById("inputNameResult");
+    let nameExp = /^[가-힣]{2,5}$/;
+
+    if(nameExp.test(e.target.value) && e.target.value.length != 0) {
+        inputNameResult.innerText = "정상입력";
+        inputNameResult.style.color = "green";
+        let checkObj = {"inputName" : true}
+    } else if (e.target.value.length <= 1) {
+        inputNameResult.innerText = "";
+    } else {
+        inputNameResult.innerText = "한글만 입력하세요";
+        inputNameResult.style.color = "red";
     }
 });
+
+
+document.getElementById("createBtn").addEventListener("click", (e) => {
+    let inputGender = document.getElementById("inputGender");
+    let telExp = /^[0][0-9]{1,2}-[0-9]{3,4}-[0-9]{4}/;
+    //function validate() {
+        if(inputGender.value.length == 0) {
+           alert("성별을 선택해주세요");
+           let checkObj = { "gender" : false } 
+        } else {
+            let checkObj = { "gender" : true }
+        }
+
+        if(telExp.test(inputTel.value)) {
+            let checkObj = { "inputTel" : true }
+        } else {
+            alert("전화번호의 형식이 올바르지 않습니다");
+            let checkObj = { "inputTel" : false }
+        }
+    //}
+    
+    
+    
+    
+    
+    
+    if(checkObj.every((checkObj)=> checkObj == true)) {
+        alert("회원가입 완료");
+    }
+});
+
+
+// document.getElementById("idBtn").addEventListener("click", (e) => {
+    
+//     const inputId = document.getElementById("inputId");
+//     const idExp = /^[a-z][a-zA-Z0-9\-_]{5,13}$/;
+//     if(idExp.test(inputId.value)) {
+//         inputId.style.backgroundColor = "springgreen";
+//     }else {
+//         inputId.style.backgroundColor = "red"
+//     }
+// });
